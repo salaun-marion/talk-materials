@@ -7,6 +7,8 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
@@ -154,7 +156,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Automatisation de la diffusion sur les réseaux sociaux pour une revue, exemple du JDH</h1>
-  <p class="subtitle">Revue 3.0 workshop</p>
+  <p class="subtitle">Atelier de la Revue 3.0</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -188,10 +190,13 @@ Marion Salaün
 <h1>Plan</h1>
 <ul>
 <li>Qu’est-ce que le JDH ?</li>
-<li>Problème initial …</li>
-<li>… et ceux qui s’ensuivent</li>
-<li>Comment cela fonctionne ?</li>
-<li>Qui écrit ? L’auteur ou l’éditeur ?</li>
+<li>Gestion d’un journal</li>
+<li>Les réseaux sociaux</li>
+<li>Les problèmes rencontrés</li>
+<li>La plannification</li>
+<li>Pourquoi automatiser ?</li>
+<li>Qui communique ?</li>
+<li>Conlusion</li>
 </ul>
 <aside class="notes">
 <p>Marion</p>
@@ -346,9 +351,9 @@ Marion Salaün
 
 <img data-src="./img/07_05_26/JDH_flux_social_media.png" class="r-stretch"></section>
 
-<section id="dans-le-dashboard" class="title-slide slide level1 center">
-<h1>Dans le dashboard</h1>
-<p>[Intégrer une vidéo de démo de la planification des réseaux sociaux ici]</p>
+<section id="section-3" class="title-slide slide level1 center">
+<h1></h1>
+<video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="./img/07_05_26/social_media_campaign.mov"></video>
 <aside class="notes">
 <p>Marion</p>
 <style type="text/css">
@@ -362,6 +367,16 @@ Marion Salaün
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+
+<section id="résultat" class="title-slide slide level1 center">
+<h1>Résultat</h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="./img/07_05_26/bluesky_result_1.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="./img/07_05_26/bluesky_result_2.png"></p>
+</div></div>
 </section>
 
 <section id="problèmes-rencontrés" class="title-slide slide level1 center">
@@ -387,7 +402,7 @@ Marion Salaün
 </tr>
 <tr class="even">
 <td>Nombre de mots</td>
-<td>63,206</td>
+<td>63 206</td>
 <td>300</td>
 </tr>
 <tr class="odd">
@@ -442,7 +457,7 @@ Marion Salaün
 </ol>
 </section>
 
-<section id="section-3" class="title-slide slide level1 center scrollable">
+<section id="section-4" class="title-slide slide level1 center scrollable">
 <h1></h1>
 <ol start="5" type="1">
 <li>Une fois que l’on a récupérer tout ça, on doit récupérer un <code>long-lived page access token</code></li>
@@ -453,10 +468,15 @@ Marion Salaün
 
 <img data-src="./img/07_05_26/JDH_facebook_meta_token.png" class="r-stretch"></section>
 
-<section id="et-puis-il-faut-aussi-plannifier" class="title-slide slide level1 center">
-<h1>… et puis il faut aussi “plannifier”</h1>
-<p>… donc gérer <strong>une heure</strong> de planification avec un <code>scheduler</code>.</p>
-<p>[schéma mignon de comment ça marche avec bluesky]</p>
+<section id="section-5" class="title-slide slide level1 center">
+<h1></h1>
+<p>Et puis, il faut planifier donc gérer <strong>une heure</strong> de planification avec un <code>scheduler</code>.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="./img/07_05_26/bluesky_simplify.svg" height="650"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="./img/07_05_26/bluesky_super_simplify.png" height="650"></p>
+</div></div>
 </section>
 
 <section id="mais-si-cest-aussi-complexe-pourquoi-automatiser" class="title-slide slide level1 center">
@@ -469,7 +489,7 @@ Marion Salaün
 
 </section>
 
-<section id="section-4" class="title-slide slide level1 center">
+<section id="section-6" class="title-slide slide level1 center">
 <h1></h1>
 <ul>
 <li>risque d’oubli sur le “comment faire” par l’humain car on ne publie pas tous les jours</li>
@@ -480,23 +500,15 @@ Marion Salaün
 <p>mais surtout…</p>
 </section>
 
-<section id="section-5" class="title-slide slide level1 center">
+<section id="section-7" class="title-slide slide level1 center">
 <h1></h1>
 <p>Apprentissage de nouvel compétence (code, vision d’ensemble des étapes) que ce soit par l’équipe mais aussi par nos étudiants.</p>
-<blockquote>
-<p>« Quand un homme a faim, mieux vaut lui apprendre à pêcher que de lui donner un poisson. » par Confucius (<span class="citation" data-cites="bouffard_chapitre_2011">Bouffard (<a href="#/bibliography" role="doc-biblioref" onclick="">2011</a>)</span>)</p>
-</blockquote>
-
-<img data-src="./img/07_05_26/Kochi_chinese_fishing-net.jpg" title="Title: Filet de pêche traditionnel chinois près de Kochi, dans le Kérala (Inde)." class="r-stretch quarto-figure-center"><p class="caption">Filet de pêche traditionnel chinois près de Kochi, dans le Kérala (Inde). Creative Commons Attribution ShareAlike 3.0. <span class="citation" data-cites="rosbach_english_2008">Rosbach (<a href="#/bibliography" role="doc-biblioref" onclick="">2008</a>)</span></p></section>
-
-<section id="section-6" class="title-slide slide level1 center">
-<h1></h1>
 <p>En programmation, on ne réinvente pas la roue à chaque fois.</p>
-<p><a href="./img/07_05_26/node_modules_heaviest.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="./img/07_05_26/node_modules_heaviest.png"></a></p>
+<p><a href="./img/07_05_26/node_modules_heaviest.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="./img/07_05_26/node_modules_heaviest.png" height="600"></a></p>
 </section>
 
-<section id="piste-damélioration-pour-la-suite" class="title-slide slide level1 center">
-<h1>Piste d’amélioration pour la suite ?</h1>
+<section id="à-qui-de-communiquer" class="title-slide slide level1 center">
+<h1>À qui de communiquer ?</h1>
 <p><code>Tweet.md</code> qui l’écrit ?</p>
 <ul>
 <li>l’auteur ? à tendance à l ’oublier</li>
@@ -504,6 +516,24 @@ Marion Salaün
 <li>l’IA ? mais dans ce cas doit impérativement être relu par quelqu’un et probablemet recorriger</li>
 </ul>
 </section>
+
+<section id="conclusion" class="title-slide slide level1 center">
+<h1>Conclusion</h1>
+<blockquote>
+<p>« Quand un homme a faim, mieux vaut lui apprendre à pêcher que de lui donner un poisson. » par Confucius (<span class="citation" data-cites="bouffard_chapitre_2011">Bouffard (<a href="#/bibliography" role="doc-biblioref" onclick="">2011</a>)</span>)</p>
+</blockquote>
+
+<img data-src="./img/07_05_26/Kochi_chinese_fishing-net.jpg" title="Title: Filet de pêche traditionnel chinois près de Kochi, dans le Kérala (Inde)." class="r-stretch quarto-figure-center"><p class="caption">Filet de pêche traditionnel chinois près de Kochi, dans le Kérala (Inde). Creative Commons Attribution ShareAlike 3.0. <span class="citation" data-cites="rosbach_english_2008">Rosbach (<a href="#/bibliography" role="doc-biblioref" onclick="">2008</a>)</span></p></section>
+
+<section id="bluesky" class="title-slide slide level1 center">
+<h1>Bluesky</h1>
+
+<img data-src="./img/07_05_26/BE_bluesky.svg" class="r-stretch"></section>
+
+<section id="facebook" class="title-slide slide level1 center">
+<h1>Facebook</h1>
+
+<img data-src="./img/07_05_26/BE_facebook.svg" class="r-stretch"></section>
 
 <section id="bibliography" class="title-slide slide level1 smaller scrollable">
 <h1>Bibliography</h1>
@@ -904,6 +934,7 @@ Rosbach, Hans A. 2008. <span>«&nbsp;English: <span>Chinese</span> fishing net n
         }
       });
       </script>
+    <script>videojs(video_shortcode_videojs_video1);</script>
     <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
     (function() {
       let previousOnload = window.onload;
