@@ -192,10 +192,9 @@ Marion Salaün
 <h1>Plan</h1>
 <ul>
 <li>Qu’est-ce que le JDH ?</li>
-<li>Gestion d’un journal</li>
-<li>Les réseaux sociaux</li>
+<li>Cycle du JDH</li>
+<li>Comment on gère nos réseaux ?</li>
 <li>Les problèmes rencontrés</li>
-<li>La plannification</li>
 <li>Pourquoi automatiser ?</li>
 <li>Qui communique ?</li>
 <li>Conlusion</li>
@@ -221,7 +220,7 @@ Marion Salaün
 <p>Journal académique en ligne basé sur le principe de plusieurs niveau de lecture pour chaque article (narratif, herméneutique, code et données). Le journal est en accès libre et n’engendre aucun coût que ce soit pour les auteurs ou pour les lecteurs.</p>
 <p>Lien : <a href="https://journalofdigitalhistory.org/">https://journalofdigitalhistory.org/</a></p>
 <p>En association avec la maison d’édition De Gruyter Brill.</p>
-<p><strong>Nouveau numéro</strong> : IA et Histoire</p>
+<p><strong>Dernier call for paper</strong> : IA et Histoire</p>
 <aside class="notes">
 <p>Marion</p>
 <style type="text/css">
@@ -273,16 +272,19 @@ Marion Salaün
       }</style></aside>
 </section>
 
-<section id="gestion-dun-journal" class="title-slide slide level1 center">
-<h1>Gestion d’un journal</h1>
-<ul>
-<li>gérer les soumissions : accepter, décliner, etc…</li>
+<section id="cycle-de-vie-dun-journal" class="title-slide slide level1 center scrollable">
+<h1>Cycle de vie d’un journal</h1>
+<ol type="1">
+<li>gérer les soumissions : accepter, décliner, …</li>
 <li>contacter les auteurs régulièrement</li>
-<li>réaliser des revues techniques de leur travail (débugger le code, vérifier que les packages soient bien installés etc…)</li>
-<li>corriger les erreurs de frappes, orthographe, etc..</li>
+<li>réaliser des revues techniques de leur travail (débugger le code, vérifier que les packages soient bien installés …)</li>
+<li>organiser les peer reviews</li>
+<li>corriger les erreurs de frappes, orthographe</li>
 <li>vérifier la mise en page</li>
-<li>etc… x10 000</li>
-</ul>
+<li>publier</li>
+<li>faire la promotion de l’article</li>
+<li>l’archiver avec le pdf</li>
+</ol>
 </section>
 
 <section id="flux" class="title-slide slide level1 center">
@@ -304,6 +306,27 @@ Marion Salaün
           display:block!important;
       }</style></aside>
 </section>
+
+<section id="section-2" class="title-slide slide level1 center">
+<h1></h1>
+<p>Pour cette fois-ci, essayons de focus sur un point précis … les réseaux sociaux.</p>
+
+<img data-src="./img/07_05_26/JDH_flux_social_media.png" class="r-stretch"></section>
+
+<section id="tweets.md" class="title-slide slide level1 center">
+<h1>Tweets.md</h1>
+
+<img data-src="./img/07_05_26/tweetsdotmd.png" class="r-stretch"></section>
+
+<section id="socialmediacover.png" class="title-slide slide level1 center">
+<h1>Socialmediacover.png</h1>
+
+<img data-src="./img/07_05_26/socialmediacover.png" class="r-stretch"></section>
+
+<section id="github-repository" class="title-slide slide level1 center">
+<h1>Github repository</h1>
+
+<img data-src="./img/07_05_26/github_repo.png" class="r-stretch"></section>
 
 <section id="solution" class="title-slide slide level1 center">
 <h1>Solution ?</h1>
@@ -340,18 +363,6 @@ Marion Salaün
           display:block!important;
       }</style></aside>
 </section>
-
-<section id="rappel-le-flux" class="title-slide slide level1 center">
-<h1>Rappel : le flux</h1>
-<p>Pour cette fois-ci, essayons de focus sur un point précis …</p>
-
-<img data-src="./img/07_05_26/JDH_flux.png" class="r-stretch"></section>
-
-<section id="section-2" class="title-slide slide level1 center">
-<h1></h1>
-<p>… les réseaux sociaux.</p>
-
-<img data-src="./img/07_05_26/JDH_flux_social_media.png" class="r-stretch"></section>
 
 <section id="section-3" class="title-slide slide level1 center">
 <h1></h1>
@@ -403,7 +414,7 @@ Marion Salaün
 <td>une publication et jusqu’à 5 réponses</td>
 </tr>
 <tr class="even">
-<td>Nombre de mots</td>
+<td>Nombre de caractères</td>
 <td>63 206</td>
 <td>300</td>
 </tr>
@@ -413,26 +424,21 @@ Marion Salaün
 <td>✅</td>
 </tr>
 <tr class="even">
-<td>Créer un compte</td>
-<td>❌ Accepter de se faire prendre en photo</td>
-<td>✅ Simple</td>
-</tr>
-<tr class="odd">
 <td>Tester</td>
-<td>❌</td>
+<td>❌ Accepter de se faire prendre en photo</td>
 <td>✅</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Token pour l’API</td>
 <td>Difficile à obtenir</td>
 <td>✅</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Administrateur</td>
 <td>❌ lié au compte utilisateur</td>
 <td>✅</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Stockage du post dans l’API</td>
 <td>✅</td>
 <td>❌</td>
@@ -473,13 +479,8 @@ Marion Salaün
 <section id="section-5" class="title-slide slide level1 center">
 <h1></h1>
 <p>Et puis, il faut planifier donc gérer <strong>une heure</strong> de planification avec un <code>scheduler</code>.</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="./img/07_05_26/bluesky_simplify.svg" height="650"></p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="./img/07_05_26/bluesky_super_simplify.png" height="650"></p>
-</div></div>
-</section>
+
+<img data-src="./img/07_05_26/bluesky_simplify.svg" class="r-stretch"></section>
 
 <section id="mais-si-cest-aussi-complexe-pourquoi-automatiser" class="title-slide slide level1 center">
 <h1>Mais si c’est aussi complexe, pourquoi automatiser ?</h1>
@@ -515,7 +516,7 @@ Marion Salaün
 <ul>
 <li>l’auteur ? à tendance à l ’oublier</li>
 <li>l’éditeur ? ne connaît pas aussi bien l’article que l’auteur</li>
-<li>l’IA ? mais dans ce cas doit impérativement être relu par quelqu’un et probablemet recorriger</li>
+<li>l’IA ? mais dans ce cas doit impérativement être relu par quelqu’un et probablement recorriger</li>
 </ul>
 </section>
 
