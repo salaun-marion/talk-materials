@@ -194,8 +194,8 @@ Marion Salaün
 <li>Comment on gère nos réseaux ?</li>
 <li>Les problèmes rencontrés</li>
 <li>Pourquoi automatiser ?</li>
-<li>Qui communique ?</li>
-<li>Conlusion</li>
+<li>Retour d’expérience</li>
+<li>Conclusion</li>
 </ul>
 <aside class="notes">
 <p>Marion</p>
@@ -216,9 +216,9 @@ Marion Salaün
 <h1>Qu’est-ce que le JDH ?</h1>
 <p>Journal of Digital History (JDH)</p>
 <p>Journal académique en ligne basé sur le principe de plusieurs niveau de lecture pour chaque article (narratif, herméneutique, code et données). Le journal est en accès libre et n’engendre aucun coût que ce soit pour les auteurs ou pour les lecteurs.</p>
-<p>Lien : <a href="https://journalofdigitalhistory.org/">https://journalofdigitalhistory.org/</a></p>
 <p>En association avec la maison d’édition De Gruyter Brill.</p>
-<p><strong>Dernier call for paper</strong> : IA et Histoire</p>
+<p>Lien : <a href="https://journalofdigitalhistory.org/">https://journalofdigitalhistory.org/</a></p>
+<p><strong>Dernier call for paper</strong> : AI &amp; History</p>
 <aside class="notes">
 <p>Marion</p>
 <style type="text/css">
@@ -283,6 +283,19 @@ Marion Salaün
 <li>faire la promotion de l’article</li>
 <li>l’archiver avec le pdf</li>
 </ol>
+<aside class="notes">
+<p>Elisabeth</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 
 <section id="flux" class="title-slide slide level1 center">
@@ -307,9 +320,14 @@ Marion Salaün
 
 <section id="section-2" class="title-slide slide level1 center">
 <h1></h1>
-<p>Pour cette fois-ci, essayons de focus sur un point précis … les réseaux sociaux.</p>
+<p>Aujourd’hui, notre focus sera sur… les réseaux sociaux.</p>
 
 <img data-src="./img/07_05_26/JDH_flux_social_media.png" class="r-stretch"></section>
+
+<section id="github-repository" class="title-slide slide level1 center">
+<h1>Github repository</h1>
+
+<img data-src="./img/07_05_26/github_repo.png" class="r-stretch"></section>
 
 <section id="tweets.md" class="title-slide slide level1 center">
 <h1>Tweets.md</h1>
@@ -320,11 +338,6 @@ Marion Salaün
 <h1>Socialmediacover.png</h1>
 
 <img data-src="./img/07_05_26/socialmediacover.png" class="r-stretch"></section>
-
-<section id="github-repository" class="title-slide slide level1 center">
-<h1>Github repository</h1>
-
-<img data-src="./img/07_05_26/github_repo.png" class="r-stretch"></section>
 
 <section id="solution" class="title-slide slide level1 center">
 <h1>Solution ?</h1>
@@ -439,7 +452,7 @@ Marion Salaün
 <tr class="odd">
 <td>Stockage du post dans l’API</td>
 <td>✅</td>
-<td>❌</td>
+<td>❌ “scheduler”</td>
 </tr>
 </tbody>
 </table>
@@ -466,8 +479,8 @@ Marion Salaün
 <section id="section-4" class="title-slide slide level1 center scrollable">
 <h1></h1>
 <ol start="5" type="1">
-<li>Une fois que l’on a récupérer tout ça, on doit récupérer un <code>long-lived page access token</code></li>
-<li>Il faudra pour ce faire… récupérer la <code>graph-api version</code></li>
+<li>Une fois que l’on a eu tout ça, on doit récupérer un <code>long-lived page access token</code></li>
+<li>Il faudra pour se faire… récupérer la <code>graph-api version</code></li>
 <li>Puis le <code>app-scoped-user-id</code></li>
 <li>Et réutiliser le <code>long-lived user access token</code> obtenu à l’étape 5 🤪</li>
 </ol>
@@ -478,7 +491,7 @@ Marion Salaün
 <h1></h1>
 <p>Et puis, il faut planifier donc gérer <strong>une heure</strong> de planification avec un <code>scheduler</code>.</p>
 
-<img data-src="./img/07_05_26/bluesky_simplify.svg" class="r-stretch"></section>
+<img data-src="./img/07_05_26/bluesky_simplify.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
 
 <section id="mais-si-cest-aussi-complexe-pourquoi-automatiser" class="title-slide slide level1 center">
 <h1>Mais si c’est aussi complexe, pourquoi automatiser ?</h1>
@@ -495,8 +508,8 @@ Marion Salaün
 <ul>
 <li>risque d’oubli sur le “comment faire” par l’humain car on ne publie pas tous les jours</li>
 <li>vérification systématique si tous les fichiers sont présents (<code>tweet.md</code>, <code>socialmediacover.png</code>)</li>
-<li>libère du temps pour d’autre tâche(s) : aider les auteurs par exemple</li>
 <li>permet d’investir la possibilité de <strong>répliquer</strong> sur d’autres réseaux sociaux (Linkedin, Mastodon, Threads…)</li>
+<li>libère du temps pour d’autre tâche(s) : aider les auteurs par exemple</li>
 </ul>
 <p>mais surtout…</p>
 </section>
@@ -504,12 +517,12 @@ Marion Salaün
 <section id="section-7" class="title-slide slide level1 center">
 <h1></h1>
 <p>Apprentissage de nouvel compétence (code, vision d’ensemble des étapes) que ce soit par l’équipe mais aussi par nos étudiants.</p>
-<p>En programmation, on ne réinvente pas la roue à chaque fois.</p>
+<p>En programmation, <strong>on ne réinvente pas la roue à chaque fois</strong>.</p>
 <p><a href="./img/07_05_26/node_modules_heaviest.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="./img/07_05_26/node_modules_heaviest.png" height="600"></a></p>
 </section>
 
-<section id="à-qui-de-communiquer" class="title-slide slide level1 center">
-<h1>À qui de communiquer ?</h1>
+<section id="retour-dexpérience" class="title-slide slide level1 center">
+<h1>Retour d’expérience</h1>
 <p><code>Tweet.md</code> qui l’écrit ?</p>
 <ul>
 <li>l’auteur ? à tendance à l ’oublier</li>
