@@ -16,7 +16,7 @@ You need only to modify one file : `index.qmd`.
 
 The syntax is quite similar with Markdown but do not hesitate to check on Quarto documentaton website for the syntax 😉
 
-# To publish on you github website
+# To publish on your github website
 
 To have access to your slides on your : **username.github.io/talk-materials** website.
 You need to use this command line to publish your slides on it : `quarto publish gh-pages`
