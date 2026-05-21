@@ -1,0 +1,279 @@
+---
+title: "Automatisation de la diffusion sur les réseaux sociaux pour une revue, exemple du JDH"
+subtitle: "Atelier de la Revue 3.0"
+authors: 
+  - name: Frédéric Clavert
+    orcid: 0000-0002-0237-2532
+    affiliations: Luxembourg Centre for Contemporary and Digital History (C²DH)
+  - name: Elisabeth Guerard
+    orcid: 0000-0001-7742-4141
+    affiliations: Luxembourg Centre for Contemporary and Digital History (C²DH)
+  - name: Marion Salaün
+    affiliations: Luxembourg Centre for Contemporary and Digital History (C²DH)
+lang: fr
+editor: source
+format:
+  revealjs: 
+    slide-number: true
+    # template-partials:
+    #  - title-slide.html
+    theme: [default]
+    logo: img/logo-jdh.png
+    header-logo: img/logo-jdh.png
+#    hide-from-titleSlide: text
+    footer: "Revue 3.0 - 7 mai 2026"
+    scrollable: TRUE
+    smaller: TRUE
+    overview: TRUE
+    chalkboard: TRUE
+#    transition: fade
+    transition-speed: fast
+    bibliography: biblio.bib
+    menu: TRUE
+    css: style.css
+    # pointer:
+    #  pointerSize: 20
+    #  color: 'red4'
+#krevealjs-plugins:
+#  - pointer
+# filters:
+#  - reveal-header
+engine: markdown
+---
+
+# Plan
+
+- Qu'est-ce que le JDH ?
+- Cycle du JDH
+- Comment on gère nos réseaux ?
+- Les problèmes rencontrés
+- Pourquoi automatiser ? 
+- Retour d'expérience
+- Conclusion
+
+::: notes 
+Marion
+:::
+
+# Qu'est-ce que le JDH ? 
+
+Journal of Digital History (JDH)
+
+Journal académique en ligne basé sur le principe de plusieurs niveau de lecture pour chaque article (narratif, herméneutique, code et données).
+Le journal est en accès libre et n'engendre aucun coût que ce soit pour les auteurs ou pour les lecteurs. 
+
+En association avec la maison d'édition De Gruyter Brill.
+
+Lien : [https://journalofdigitalhistory.org/](https://journalofdigitalhistory.org/)
+
+**Dernier call for paper** : AI & History
+
+::: notes 
+Marion
+:::
+
+# 
+
+![](./img/07_05_26/JDH_exemple_article.png)
+
+::: notes 
+Marion
+:::
+
+#
+
+![](./img/07_05_26/JDH_exemple_code_article.png)
+
+::: notes 
+Marion
+:::
+
+# Cycle de vie d'un journal
+
+1. gérer les soumissions : accepter, décliner, ...
+2. contacter les auteurs régulièrement
+3. réaliser des revues techniques de leur travail (débugger le code, vérifier que les packages soient bien installés ...)
+4. organiser les peer reviews
+5. corriger les erreurs de frappes, orthographe
+6. vérifier la mise en page
+7. publier
+8. faire la promotion de l'article
+9. l'archiver avec le pdf
+
+::: notes 
+Elisabeth
+:::
+
+# Flux
+
+🎨 Lien [Figma](https://www.figma.com/board/qSfyxRc0vBFFihmLDjsJm4/JDH-submission-process?node-id=0-1&p=f&t=JG1Q03iGhjN3EPC8-0)
+
+![](./img/07_05_26/JDH_flux.png)
+
+... et c'est loin d'être exhaustif !
+
+::: notes 
+Marion
+:::
+
+# 
+
+Aujourd'hui, notre focus sera sur... les réseaux sociaux.
+
+![](./img/07_05_26/JDH_flux_social_media.png)
+
+# Github repository
+
+![](./img/07_05_26/github_repo.png)
+
+# Tweets.md
+
+![](./img/07_05_26/tweetsdotmd.png)
+
+# Socialmediacover.png
+
+![](./img/07_05_26/socialmediacover.png)
+
+# Solution ? 
+
+![](./img/07_05_26/dashboard_gif.png)
+
+::: notes 
+Marion
+:::
+
+# Dashboard
+
+![](./img/07_05_26/JDH_dashboard.png)
+
+::: notes 
+Marion
+:::
+
+# 
+
+{{< video ./img/07_05_26/social_media_campaign.mov>}}
+
+::: notes 
+Marion
+:::
+
+# Résultat
+
+:::: {.columns}
+::: {.column width="50%"}
+![](./img/07_05_26/bluesky_result_1.png)
+:::
+::: {.column width="50%"}
+![](./img/07_05_26/bluesky_result_2.png)
+:::
+::::
+
+# Problèmes rencontrés
+
+
+|                       | Facebook               | Bluesky             |
+|-----------------------|-------------------|----------------------|
+| Nombre de publication/réponse                 | une publication unique               | une publication et jusqu'à 5 réponses   |
+| Nombre de caractères             | 63 206          | 300   |
+| Qualité de la documentation  |   ❌                | ✅                    |
+| Tester    |   ❌  Accepter de se faire prendre en photo                  | ✅                    |
+| Token pour l'API             | Difficile à obtenir               | ✅                    |
+| Administrateur | ❌ lié au compte utilisateur               | ✅     |
+| Stockage du post dans l'API       | ✅                   | ❌ "scheduler"  |
+
+# Un exemple de parcours du combattant 
+
+Pour obtenir un token qui a une durée illimitée avec Facebook, il vous faudra : 
+
+1. Un `long-lived user access token` (dure 60 jours) avec la requête suivante
+
+````
+curl -i -X GET "https://graph.facebook.com/{graph-api-version}/oauth/access_token?       
+  grant_type=fb_exchange_token&               
+  client_id={app-id}&     
+  client_secret={app-secret}&     
+  fb_exchange_token={your-access-token}"
+````
+
+2. Il faut récupérer l'`app-id`
+3. L'`app-secret`
+4. Puis générer l'`access-token` 
+
+#
+
+5. Une fois que l'on a eu tout ça, on doit récupérer un `long-lived page access token`
+6. Il faudra pour se faire... récupérer la `graph-api version`
+7. Puis le `app-scoped-user-id`
+8. Et réutiliser le `long-lived user access token` obtenu à l'étape 5 🤪
+
+![](./img/07_05_26/JDH_facebook_meta_token.png)
+
+# 
+
+Et puis, il faut planifier donc gérer **une heure** de planification avec un `scheduler`.
+
+![](./img/07_05_26/bluesky_simplify.svg){fig-align="center"}
+
+
+# Mais si c'est aussi complexe, pourquoi automatiser ? 
+
+# ... parce que automatiser amène aussi des avantages
+
+#
+
+- risque d'oubli sur le "comment faire" par l'humain car on ne publie pas tous les jours
+- vérification systématique si tous les fichiers sont présents (`tweet.md`, `socialmediacover.png`)
+- permet d'investir la possibilité de **répliquer** sur d'autres réseaux sociaux (Linkedin, Mastodon, Threads...)
+- libère du temps pour d'autre tâche(s) : aider les auteurs par exemple
+
+mais surtout...
+
+# 
+
+Apprentissage de nouvel compétence (code, vision d'ensemble des étapes) que ce soit par l'équipe mais aussi par nos étudiants.
+
+En programmation, **on ne réinvente pas la roue à chaque fois**.
+
+![](./img/07_05_26/node_modules_heaviest.png){.lightbox height="600px"}
+
+# 
+
+... le développeur **"aime" l'automatisation**
+
+- les tests et déploiement en production sont souvent automatisés
+- identifier les éléments à automatiser
+- utiliser de la visualisation comme un dashboard pour mieux gérer son travail (@noauthor_dora_nodate)
+
+> "Computers perform repetitive tasks; people solve problems." (@forsgren_accelerate_2018)
+
+![](./img/07_05_26/DORA.png)
+
+# Un goulot d'étranglement inattendu
+
+- l'auteur ? Soit trop tôt - soit tard - manque de culture de promotion / culture médias sociaux
+- l'éditeur ? Moins bien placé pour synthétiser le contenu de l'article
+- l'IA ? Solution envisageable, mais redondante : nécessite une relecture humaine systématique... par l'auteur qui a déjà écrit l'article
+
+# Vers une nouvelle culture de la publication ? 
+
+- Faut-il former les auteurs à écrire court ?
+- Quel réseau choisir selon le public et la discipline ?
+- Saucissoner l'abstract cf. [RevueHN](https://social.sciences.re/@RevueHN)
+- Une pratique en devenir 
+
+![](./img/07_05_26/JODH_vibes_dataset.png)
+
+
+# Bluesky 
+
+![](./img/07_05_26/BE_bluesky.svg)
+
+# Facebook
+
+![](./img/07_05_26/BE_facebook.svg)
+
+# Bibliography
+
+
+

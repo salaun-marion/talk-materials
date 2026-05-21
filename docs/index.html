@@ -535,23 +535,25 @@ Marion Salaün
 
 <img data-src="./img/07_05_26/DORA.png" class="r-stretch"></section>
 
-<section id="retour-dexpérience" class="title-slide slide level1 center">
-<h1>Retour d’expérience</h1>
-<p><code>Tweet.md</code> qui l’écrit ?</p>
+<section id="un-goulot-détranglement-inattendu" class="title-slide slide level1 center">
+<h1>Un goulot d’étranglement inattendu</h1>
 <ul>
-<li>l’auteur ? à tendance à l ’oublier</li>
-<li>l’éditeur ? ne connaît pas aussi bien l’article que l’auteur</li>
-<li>l’IA ? mais dans ce cas doit impérativement être relu par quelqu’un et probablement recorriger</li>
+<li>l’auteur ? Soit trop tôt - soit tard - manque de culture de promotion / culture médias sociaux</li>
+<li>l’éditeur ? Moins bien placé pour synthétiser le contenu de l’article</li>
+<li>l’IA ? Solution envisageable, mais redondante : nécessite une relecture humaine systématique… par l’auteur qui a déjà écrit l’article</li>
 </ul>
 </section>
 
-<section id="conclusion" class="title-slide slide level1 center">
-<h1>Conclusion</h1>
-<blockquote>
-<p>« Quand un homme a faim, mieux vaut lui apprendre à pêcher que de lui donner un poisson. » par Confucius (<span class="citation" data-cites="bouffard_chapitre_2011">Bouffard (<a href="#/bibliography" role="doc-biblioref" onclick="">2011</a>)</span>)</p>
-</blockquote>
+<section id="vers-une-nouvelle-culture-de-la-publication" class="title-slide slide level1 center">
+<h1>Vers une nouvelle culture de la publication ?</h1>
+<ul>
+<li>Faut-il former les auteurs à écrire court ?</li>
+<li>Quel réseau choisir selon le public et la discipline ?</li>
+<li>Saucissoner l’abstract cf.&nbsp;<a href="https://social.sciences.re/@RevueHN">RevueHN</a></li>
+<li>Une pratique en devenir</li>
+</ul>
 
-<img data-src="./img/07_05_26/Kochi_chinese_fishing-net.jpg" title="Title: Filet de pêche traditionnel chinois près de Kochi, dans le Kérala (Inde)." class="r-stretch quarto-figure-center"><p class="caption">Filet de pêche traditionnel chinois près de Kochi, dans le Kérala (Inde). Creative Commons Attribution ShareAlike 3.0. <span class="citation" data-cites="rosbach_english_2008">Rosbach (<a href="#/bibliography" role="doc-biblioref" onclick="">2008</a>)</span></p></section>
+<img data-src="./img/07_05_26/JODH_vibes_dataset.png" class="r-stretch"></section>
 
 <section id="bluesky" class="title-slide slide level1 center">
 <h1>Bluesky</h1>
@@ -568,17 +570,11 @@ Marion Salaün
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-bouffard_chapitre_2011" class="csl-entry" role="listitem">
-Bouffard, Thérèse. 2011. <span>«&nbsp;Chapitre 9. <span>Des</span> apprenants autonomes ?&nbsp;»</span> Presses Universitaires de France. <a href="https://doi.org/10.3917/puf.brgeo.2011.01.0139">https://doi.org/10.3917/puf.brgeo.2011.01.0139</a>.
-</div>
 <div id="ref-noauthor_dora_nodate" class="csl-entry" role="listitem">
 <span>«&nbsp;<span>DORA</span> <span></span> <span>Value</span> stream mapping for software delivery&nbsp;»</span>. s.&nbsp;d. Consulté le 7 mai 2026. <a href="https://dora.dev">https://dora.dev</a>.
 </div>
 <div id="ref-forsgren_accelerate_2018" class="csl-entry" role="listitem">
 Forsgren, Nicole. 2018. <em>Accelerate: : building and scaling high performing technology organizations /</em>. First edition. Portland, OR: IT Revolution Press.
-</div>
-<div id="ref-rosbach_english_2008" class="csl-entry" role="listitem">
-Rosbach, Hans A. 2008. <span>«&nbsp;English: <span>Chinese</span> fishing net near <span>Kochi</span>.&nbsp;»</span> <a href="https://commons.wikimedia.org/wiki/File:Kochi_chinese_fishing-net-20080215-01a.jpg">https://commons.wikimedia.org/wiki/File:Kochi_chinese_fishing-net-20080215-01a.jpg</a>.
 </div>
 </div>
 </section>
@@ -870,7 +866,7 @@ Rosbach, Hans A. 2008. <span>«&nbsp;English: <span>Chinese</span> fishing net n
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/salaun-marion\.github\.io\/talk-materials\/");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
