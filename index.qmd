@@ -79,12 +79,41 @@ Frédéric
 
 # Evidence RAG
 
-........
-We need to add some visualisations
+1. Infrastructure : Grid5000 or local model
+2. Pipeline
+3. JDH evidence audit application
+4. Results
+
+# Infrastructure
+
+**Grid5000** is a large scale and flexible testbed for experiment-driven research in all areas of computer science.
+
+![](./img/16_06_26/grid5000.png)
+
+# Pipeline
+
+*image placeholder*
+
+![](./img/16_06_26/pipeline.png)
+
+# JDH evidence audit app
+
+![](./img/16_06_26/JDH_evidence_audit_app_1.png)
+
+#
+
+![](./img/16_06_26/JDH_evidence_audit_app_2.png)
+
+# Results
+
+*TODO: Mehrdad opinions' to be added*
+*TODO: Marion needs to add diagrams*
 
 ::: notes 
 Mehrdad + Marion
 :::
+
+
 
 # What should be future steps ?
 

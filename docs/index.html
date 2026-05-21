@@ -1,20 +1,15 @@
 <!DOCTYPE html>
-<html lang="fr"><head>
+<html lang="en"><head>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/tabby.min.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
-  <title>Automatisation de la diffusion sur les réseaux sociaux pour une revue, exemple du JDH</title>
+  <title>Towards an Interactive ‘Evidence-RAG’ Peer-Review Workspace for the Journal of Digital History</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -32,27 +27,7 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for citations */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-      margin-bottom: 0em;
-    }
-    .hanging-indent div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }  </style>
+  </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
   <link rel="stylesheet" href="style.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -155,10 +130,18 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Automatisation de la diffusion sur les réseaux sociaux pour une revue, exemple du JDH</h1>
-  <p class="subtitle">Atelier de la Revue 3.0</p>
+  <h1 class="title">Towards an Interactive ‘Evidence-RAG’ Peer-Review Workspace for the Journal of Digital History</h1>
+  <p class="subtitle">AI through History, History through AI - Tuesday 16th june 2026</p>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Mehrdad Almasi <a href="https://orcid.org/0000-0001-8203-0606" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+</div>
+        <p class="quarto-title-affiliation">
+            Luxembourg Centre for Contemporary and Digital History (C²DH)
+          </p>
+    </div>
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
 Frédéric Clavert <a href="https://orcid.org/0000-0002-0237-2532" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
@@ -177,7 +160,15 @@ Elisabeth Guerard <a href="https://orcid.org/0000-0001-7742-4141" class="quarto-
     </div>
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Marion Salaün 
+Mirjam Pfeiffer <a href="https://orcid.org/0009-0005-2265-5926" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+</div>
+        <p class="quarto-title-affiliation">
+            Luxembourg Centre for Contemporary and Digital History (C²DH)
+          </p>
+    </div>
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Marion Salaün <a href="https://orcid.org/0009-0005-3624-823X" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
 </div>
         <p class="quarto-title-affiliation">
             Luxembourg Centre for Contemporary and Digital History (C²DH)
@@ -189,16 +180,14 @@ Marion Salaün
 <section id="plan" class="title-slide slide level1 center">
 <h1>Plan</h1>
 <ul>
-<li>Qu’est-ce que le JDH ?</li>
-<li>Cycle du JDH</li>
-<li>Comment on gère nos réseaux ?</li>
-<li>Les problèmes rencontrés</li>
-<li>Pourquoi automatiser ?</li>
-<li>Retour d’expérience</li>
-<li>Conclusion</li>
+<li>Introduction</li>
+<li>Challenges about peer review</li>
+<li>Evidence RAG</li>
+<li>What should be the future steps ?</li>
+<li>POC</li>
 </ul>
 <aside class="notes">
-<p>Marion</p>
+<p>Frédéric</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -212,15 +201,11 @@ Marion Salaün
       }</style></aside>
 </section>
 
-<section id="quest-ce-que-le-jdh" class="title-slide slide level1 center">
-<h1>Qu’est-ce que le JDH ?</h1>
-<p>Journal of Digital History (JDH)</p>
-<p>Journal académique en ligne basé sur le principe de plusieurs niveau de lecture pour chaque article (narratif, herméneutique, code et données). Le journal est en accès libre et n’engendre aucun coût que ce soit pour les auteurs ou pour les lecteurs.</p>
-<p>En association avec la maison d’édition De Gruyter Brill.</p>
-<p>Lien : <a href="https://journalofdigitalhistory.org/">https://journalofdigitalhistory.org/</a></p>
-<p><strong>Dernier call for paper</strong> : AI &amp; History</p>
+<section id="introduction" class="title-slide slide level1 center">
+<h1>Introduction</h1>
+<p>……..</p>
 <aside class="notes">
-<p>Marion</p>
+<p>Frédéric</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -233,58 +218,62 @@ Marion Salaün
           display:block!important;
       }</style></aside>
 </section>
+
+<section id="challenges-about-peer-review" class="title-slide slide level1 center">
+<h1>Challenges about peer review</h1>
+<p>…….</p>
+<aside class="notes">
+<p>Frédéric</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="evidence-rag" class="title-slide slide level1 center scrollable">
+<h1>Evidence RAG</h1>
+<ol type="1">
+<li>Infrastructure : Grid5000 or local model</li>
+<li>Pipeline</li>
+<li>JDH evidence audit application</li>
+<li>Results</li>
+</ol>
+</section>
+
+<section id="infrastructure" class="title-slide slide level1 center">
+<h1>Infrastructure</h1>
+<p><strong>Grid5000</strong> is a large scale and flexible testbed for experiment-driven research in all areas of computer science.</p>
+
+<img data-src="./img/16_06_26/grid5000.png" class="r-stretch"></section>
+
+<section id="pipeline" class="title-slide slide level1 center">
+<h1>Pipeline</h1>
+<p><em>image placeholder</em></p>
+
+<img data-src="./img/16_06_26/pipeline.png" class="r-stretch"></section>
+
+<section id="jdh-evidence-audit-app" class="title-slide slide level1 center">
+<h1>JDH evidence audit app</h1>
+
+<img data-src="./img/16_06_26/JDH_evidence_audit_app_1.png" class="r-stretch"></section>
 
 <section id="section" class="title-slide slide level1 center">
 <h1></h1>
 
-<img data-src="./img/07_05_26/JDH_exemple_article.png" class="r-stretch"><aside class="notes">
-<p>Marion</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
+<img data-src="./img/16_06_26/JDH_evidence_audit_app_2.png" class="r-stretch"></section>
 
-<section id="section-1" class="title-slide slide level1 center">
-<h1></h1>
-
-<img data-src="./img/07_05_26/JDH_exemple_code_article.png" class="r-stretch"><aside class="notes">
-<p>Marion</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-
-<section id="cycle-de-vie-dun-journal" class="title-slide slide level1 center scrollable">
-<h1>Cycle de vie d’un journal</h1>
-<ol type="1">
-<li>gérer les soumissions : accepter, décliner, …</li>
-<li>contacter les auteurs régulièrement</li>
-<li>réaliser des revues techniques de leur travail (débugger le code, vérifier que les packages soient bien installés …)</li>
-<li>organiser les peer reviews</li>
-<li>corriger les erreurs de frappes, orthographe</li>
-<li>vérifier la mise en page</li>
-<li>publier</li>
-<li>faire la promotion de l’article</li>
-<li>l’archiver avec le pdf</li>
-</ol>
+<section id="results" class="title-slide slide level1 center">
+<h1>Results</h1>
+<p><em>TODO: Mehrdad opinions’ to be added</em> <em>TODO: Marion needs to add diagrams</em></p>
 <aside class="notes">
-<p>Elisabeth</p>
+<p>Mehrdad + Marion</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -298,13 +287,11 @@ Marion Salaün
       }</style></aside>
 </section>
 
-<section id="flux" class="title-slide slide level1 center">
-<h1>Flux</h1>
-<p>🎨 Lien <a href="https://www.figma.com/board/qSfyxRc0vBFFihmLDjsJm4/JDH-submission-process?node-id=0-1&amp;p=f&amp;t=JG1Q03iGhjN3EPC8-0">Figma</a></p>
-
-<img data-src="./img/07_05_26/JDH_flux.png" class="r-stretch"><p>… et c’est loin d’être exhaustif !</p>
+<section id="what-should-be-future-steps" class="title-slide slide level1 center">
+<h1>What should be future steps ?</h1>
+<p>……</p>
 <aside class="notes">
-<p>Marion</p>
+
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -318,68 +305,11 @@ Marion Salaün
       }</style></aside>
 </section>
 
-<section id="section-2" class="title-slide slide level1 center">
-<h1></h1>
-<p>Aujourd’hui, notre focus sera sur… les réseaux sociaux.</p>
-
-<img data-src="./img/07_05_26/JDH_flux_social_media.png" class="r-stretch"></section>
-
-<section id="github-repository" class="title-slide slide level1 center">
-<h1>Github repository</h1>
-
-<img data-src="./img/07_05_26/github_repo.png" class="r-stretch"></section>
-
-<section id="tweets.md" class="title-slide slide level1 center">
-<h1>Tweets.md</h1>
-
-<img data-src="./img/07_05_26/tweetsdotmd.png" class="r-stretch"></section>
-
-<section id="socialmediacover.png" class="title-slide slide level1 center">
-<h1>Socialmediacover.png</h1>
-
-<img data-src="./img/07_05_26/socialmediacover.png" class="r-stretch"></section>
-
-<section id="solution" class="title-slide slide level1 center">
-<h1>Solution ?</h1>
-
-<img data-src="./img/07_05_26/dashboard_gif.png" class="r-stretch"><aside class="notes">
-<p>Marion</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-
-<section id="dashboard" class="title-slide slide level1 center">
-<h1>Dashboard</h1>
-
-<img data-src="./img/07_05_26/JDH_dashboard.png" class="r-stretch"><aside class="notes">
-<p>Marion</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-
-<section id="section-3" class="title-slide slide level1 center">
-<h1></h1>
-<video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="./img/07_05_26/social_media_campaign.mov"></video>
+<section id="proof-of-concept-poc" class="title-slide slide level1 center">
+<h1>Proof of Concept (POC)</h1>
+<p>…..</p>
 <aside class="notes">
-<p>Marion</p>
+
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -393,190 +323,10 @@ Marion Salaün
       }</style></aside>
 </section>
 
-<section id="résultat" class="title-slide slide level1 center">
-<h1>Résultat</h1>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="./img/07_05_26/bluesky_result_1.png"></p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="./img/07_05_26/bluesky_result_2.png"></p>
-</div></div>
-</section>
-
-<section id="problèmes-rencontrés" class="title-slide slide level1 center">
-<h1>Problèmes rencontrés</h1>
-<table class="caption-top">
-<colgroup>
-<col style="width: 35%">
-<col style="width: 29%">
-<col style="width: 34%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Facebook</th>
-<th>Bluesky</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Nombre de publication/réponse</td>
-<td>une publication unique</td>
-<td>une publication et jusqu’à 5 réponses</td>
-</tr>
-<tr class="even">
-<td>Nombre de caractères</td>
-<td>63 206</td>
-<td>300</td>
-</tr>
-<tr class="odd">
-<td>Qualité de la documentation</td>
-<td>❌</td>
-<td>✅</td>
-</tr>
-<tr class="even">
-<td>Tester</td>
-<td>❌ Accepter de se faire prendre en photo</td>
-<td>✅</td>
-</tr>
-<tr class="odd">
-<td>Token pour l’API</td>
-<td>Difficile à obtenir</td>
-<td>✅</td>
-</tr>
-<tr class="even">
-<td>Administrateur</td>
-<td>❌ lié au compte utilisateur</td>
-<td>✅</td>
-</tr>
-<tr class="odd">
-<td>Stockage du post dans l’API</td>
-<td>✅</td>
-<td>❌ “scheduler”</td>
-</tr>
-</tbody>
-</table>
-</section>
-
-<section id="un-exemple-de-parcours-du-combattant" class="title-slide slide level1 center scrollable">
-<h1>Un exemple de parcours du combattant</h1>
-<p>Pour obtenir un token qui a une durée illimitée avec Facebook, il vous faudra :</p>
-<ol type="1">
-<li>Un <code>long-lived user access token</code> (dure 60 jours) avec la requête suivante</li>
-</ol>
-<pre><code>curl -i -X GET "https://graph.facebook.com/{graph-api-version}/oauth/access_token?       
-  grant_type=fb_exchange_token&amp;               
-  client_id={app-id}&amp;     
-  client_secret={app-secret}&amp;     
-  fb_exchange_token={your-access-token}"</code></pre>
-<ol start="2" type="1">
-<li>Il faut récupérer l’<code>app-id</code></li>
-<li>L’<code>app-secret</code></li>
-<li>Puis générer l’<code>access-token</code></li>
-</ol>
-</section>
-
-<section id="section-4" class="title-slide slide level1 center scrollable">
-<h1></h1>
-<ol start="5" type="1">
-<li>Une fois que l’on a eu tout ça, on doit récupérer un <code>long-lived page access token</code></li>
-<li>Il faudra pour se faire… récupérer la <code>graph-api version</code></li>
-<li>Puis le <code>app-scoped-user-id</code></li>
-<li>Et réutiliser le <code>long-lived user access token</code> obtenu à l’étape 5 🤪</li>
-</ol>
-
-<img data-src="./img/07_05_26/JDH_facebook_meta_token.png" class="r-stretch"></section>
-
-<section id="section-5" class="title-slide slide level1 center">
-<h1></h1>
-<p>Et puis, il faut planifier donc gérer <strong>une heure</strong> de planification avec un <code>scheduler</code>.</p>
-
-<img data-src="./img/07_05_26/bluesky_simplify.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
-
-<section id="mais-si-cest-aussi-complexe-pourquoi-automatiser" class="title-slide slide level1 center">
-<h1>Mais si c’est aussi complexe, pourquoi automatiser ?</h1>
-
-</section>
-
-<section id="parce-que-automatiser-amène-aussi-des-avantages" class="title-slide slide level1 center">
-<h1>… parce que automatiser amène aussi des avantages</h1>
-
-</section>
-
-<section id="section-6" class="title-slide slide level1 center">
-<h1></h1>
-<ul>
-<li>risque d’oubli sur le “comment faire” par l’humain car on ne publie pas tous les jours</li>
-<li>vérification systématique si tous les fichiers sont présents (<code>tweet.md</code>, <code>socialmediacover.png</code>)</li>
-<li>permet d’investir la possibilité de <strong>répliquer</strong> sur d’autres réseaux sociaux (Linkedin, Mastodon, Threads…)</li>
-<li>libère du temps pour d’autre tâche(s) : aider les auteurs par exemple</li>
-</ul>
-<p>mais surtout…</p>
-</section>
-
-<section id="section-7" class="title-slide slide level1 center">
-<h1></h1>
-<p>Apprentissage de nouvel compétence (code, vision d’ensemble des étapes) que ce soit par l’équipe mais aussi par nos étudiants.</p>
-<p>En programmation, <strong>on ne réinvente pas la roue à chaque fois</strong>.</p>
-<p><a href="./img/07_05_26/node_modules_heaviest.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="./img/07_05_26/node_modules_heaviest.png" height="600"></a></p>
-</section>
-
-<section id="section-8" class="title-slide slide level1 center">
-<h1></h1>
-<p>… le développeur <strong>“aime” l’automatisation</strong></p>
-<ul>
-<li>les tests et déploiement en production sont souvent automatisés</li>
-<li>identifier les éléments à automatiser</li>
-<li>utiliser de la visualisation comme un dashboard pour mieux gérer son travail (<span class="citation" data-cites="noauthor_dora_nodate"><span>«&nbsp;<span>DORA</span> <span></span> <span>Value</span> stream mapping for software delivery&nbsp;»</span> (<a href="#/bibliography" role="doc-biblioref" onclick="">s.&nbsp;d.</a>)</span>)</li>
-</ul>
-<blockquote>
-<p>“Computers perform repetitive tasks; people solve problems.” (<span class="citation" data-cites="forsgren_accelerate_2018">Forsgren (<a href="#/bibliography" role="doc-biblioref" onclick="">2018</a>)</span>)</p>
-</blockquote>
-
-<img data-src="./img/07_05_26/DORA.png" class="r-stretch"></section>
-
-<section id="un-goulot-détranglement-inattendu" class="title-slide slide level1 center">
-<h1>Un goulot d’étranglement inattendu</h1>
-<ul>
-<li>l’auteur ? Soit trop tôt - soit tard - manque de culture de promotion / culture médias sociaux</li>
-<li>l’éditeur ? Moins bien placé pour synthétiser le contenu de l’article</li>
-<li>l’IA ? Solution envisageable, mais redondante : nécessite une relecture humaine systématique… par l’auteur qui a déjà écrit l’article</li>
-</ul>
-</section>
-
-<section id="vers-une-nouvelle-culture-de-la-publication" class="title-slide slide level1 center">
-<h1>Vers une nouvelle culture de la publication ?</h1>
-<ul>
-<li>Faut-il former les auteurs à écrire court ?</li>
-<li>Quel réseau choisir selon le public et la discipline ?</li>
-<li>Saucissoner l’abstract cf.&nbsp;<a href="https://social.sciences.re/@RevueHN">RevueHN</a></li>
-<li>Une pratique en devenir</li>
-</ul>
-
-<img data-src="./img/07_05_26/JODH_vibes_dataset.png" class="r-stretch"></section>
-
-<section id="bluesky" class="title-slide slide level1 center">
-<h1>Bluesky</h1>
-
-<img data-src="./img/07_05_26/BE_bluesky.svg" class="r-stretch"></section>
-
-<section id="facebook" class="title-slide slide level1 center">
-<h1>Facebook</h1>
-
-<img data-src="./img/07_05_26/BE_facebook.svg" class="r-stretch"></section>
-
-<section id="bibliography" class="title-slide slide level1 smaller scrollable">
+<section id="bibliography" class="title-slide slide level1 center">
 <h1>Bibliography</h1>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-noauthor_dora_nodate" class="csl-entry" role="listitem">
-<span>«&nbsp;<span>DORA</span> <span></span> <span>Value</span> stream mapping for software delivery&nbsp;»</span>. s.&nbsp;d. Consulté le 7 mai 2026. <a href="https://dora.dev">https://dora.dev</a>.
-</div>
-<div id="ref-forsgren_accelerate_2018" class="csl-entry" role="listitem">
-Forsgren, Nicole. 2018. <em>Accelerate: : building and scaling high performing technology organizations /</em>. First edition. Portland, OR: IT Revolution Press.
-</div>
-</div>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
@@ -818,12 +568,12 @@ Forsgren, Nicole. 2018. <em>Accelerate: : building and scaling high performing t
           // flash "checked"
           button.classList.add('code-copy-button-checked');
           var currentTitle = button.getAttribute("title");
-          button.setAttribute("title", "Copié");
+          button.setAttribute("title", "Copied!");
           let tooltip;
           if (window.bootstrap) {
             button.setAttribute("data-bs-toggle", "tooltip");
             button.setAttribute("data-bs-placement", "left");
-            button.setAttribute("data-bs-title", "Copié");
+            button.setAttribute("data-bs-title", "Copied!");
             tooltip = new bootstrap.Tooltip(button, 
               { trigger: "manual", 
                 customClass: "code-copy-button-tooltip",
@@ -866,7 +616,7 @@ Forsgren, Nicole. 2018. <em>Accelerate: : building and scaling high performing t
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp("https:\/\/salaun-marion\.github\.io\/talk-materials\/");
+            var filterRegex = new RegExp('/' + window.location.host + '/');
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
@@ -964,39 +714,6 @@ Forsgren, Nicole. 2018. <em>Accelerate: : building and scaling high performing t
         }
       });
       </script>
-    <script>videojs(video_shortcode_videojs_video1);</script>
-    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-    (function() {
-      let previousOnload = window.onload;
-      window.onload = () => {
-        if (previousOnload) {
-          previousOnload();
-        }
-        lightboxQuarto.on('slide_before_load', (data) => {
-          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-          const href = trigger.getAttribute('href');
-          if (href !== null) {
-            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-            if (imgEl !== null) {
-              const srcAttr = imgEl.getAttribute("src");
-              if (srcAttr && srcAttr.startsWith("data:")) {
-                slideConfig.href = srcAttr;
-              }
-            }
-          } 
-        });
-      
-        lightboxQuarto.on('slide_after_load', (data) => {
-          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(slideNode);
-          }
-        });
-      
-      };
-      
-    })();
-              </script>
     
 
 </body></html>
