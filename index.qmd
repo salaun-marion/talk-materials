@@ -28,7 +28,7 @@ format:
     logo: img/logo-jdh.png
     header-logo: img/logo-jdh.png
 #   hide-from-titleSlide: text
-    footer: "Revue 3.0 - 7 mai 2026"
+    footer: "AI through History, History through AI - Tuesday 16th june 2026"
     scrollable: TRUE
     smaller: TRUE
     overview: TRUE
@@ -107,12 +107,24 @@ Frédéric
 # Results
 
 *TODO: Mehrdad opinions' to be added*
-*TODO: Marion needs to add diagrams*
+
+![](./img/16_06_26/output.png)
 
 ::: notes 
-Mehrdad + Marion
+Mehrdad
 :::
 
+# 
+
+![](./img/16_06_26/output1.png)
+
+# 
+
+![](./img/16_06_26/output2.png)
+
+# 
+
+![](./img/16_06_26/output3.png)
 
 
 # What should be future steps ?
