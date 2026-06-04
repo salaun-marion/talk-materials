@@ -62,6 +62,7 @@ Frédéric
 
 # Introduction
 
+
 ........
 
 ::: notes 
@@ -70,6 +71,14 @@ Frédéric
 
 # Challenges about peer review
 
+- Editorial decisions often rely on subjective interpretation of reviewer comments.
+- Verifying whether a reviewer comment is supported by the manuscript is time-consuming.
+- Different editors may reach different conclusions on the same comment.
+- Important evidence can be overlooked when papers are long and complex.
+- Assessing hundreds of reviewer comments creates a significant workload.
+- Limited transparency makes it difficult to justify editorial decisions.
+- Inconsistent evaluations can lead to unfair treatment of authors.
+- Manual review processes are difficult to scale as submission volumes increase.
 .......
 
 
@@ -84,6 +93,26 @@ We need to add some visualisations
 
 ::: notes 
 Mehrdad + Marion
+
+## Advantages of Our Work for Peer Review
+
+- Supports editors by linking reviewer comments to paper evidence.
+- Makes peer review decisions more transparent and explainable.
+- Reduces manual effort in checking whether comments are supported.
+- Combines RAG retrieval with model-based evidence evaluation.
+- Provides confidence scores to help prioritize difficult cases.
+- Keeps the human editor as the final decision-maker.
+- Helps identify unsupported, partially supported, or unclear reviewer comments.
+
+## Importance of Grid5000 in Our Work
+
+- Provided a reliable research infrastructure for running our experiments.
+- Offered a private computing environment for processing papers and reviews.
+- Supported GPU-based execution of large language models.
+- Enabled scalable experiments beyond local machine capacity.
+- Available in Europe, including Western Europe, which supported our research context.
+- Helped ensure more controlled and reproducible model testing.
+- Served as the main infrastructure for our Evidence-RAG pipeline.
 :::
 
 # What should be future steps ?
@@ -92,7 +121,15 @@ Mehrdad + Marion
 
 :::notes
 :::
+## Future Steps
 
+- Test the system with more papers and reviewer comments.
+- Compare results across different models and retrieval settings.
+- Improve the confidence score with editor feedback.
+- Add more human editors to evaluate fairness and consistency.
+- Build a clearer dashboard for reviewing evidence and decisions.
+- Study how Evidence-RAG can reduce workload in real editorial workflows.
+- Extend the system to support more journals and disciplines.
 # Proof of Concept (POC)
 
 .....
