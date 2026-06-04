@@ -6,8 +6,8 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.37">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
 
   <title>Towards an Interactive ‘Evidence-RAG’ Peer-Review Workspace for the Journal of Digital History</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -224,7 +224,16 @@ Marion Salaün <a href="https://orcid.org/0009-0005-3624-823X" class="quarto-tit
 
 <section id="challenges-about-peer-review" class="title-slide slide level1 center">
 <h1>Challenges about peer review</h1>
-<p>…….</p>
+<ul>
+<li>Editorial decisions often rely on subjective interpretation of reviewer comments.</li>
+<li>Verifying whether a reviewer comment is supported by the manuscript is time-consuming.</li>
+<li>Different editors may reach different conclusions on the same comment.</li>
+<li>Important evidence can be overlooked when papers are long and complex.</li>
+<li>Assessing hundreds of reviewer comments creates a significant workload.</li>
+<li>Limited transparency makes it difficult to justify editorial decisions.</li>
+<li>Inconsistent evaluations can lead to unfair treatment of authors.</li>
+<li>Manual review processes are difficult to scale as submission volumes increase. …….</li>
+</ul>
 <aside class="notes">
 <p>Frédéric</p>
 <style type="text/css">
@@ -240,11 +249,37 @@ Marion Salaün <a href="https://orcid.org/0009-0005-3624-823X" class="quarto-tit
       }</style></aside>
 </section>
 
+<section>
 <section id="evidence-rag" class="title-slide slide level1 center">
 <h1>Evidence RAG</h1>
 <p>…….. We need to add some visualisations</p>
+</section>
 <aside class="notes">
 <p>Mehrdad + Marion</p>
+<section id="advantages-of-our-work-for-peer-review" class="slide level2">
+<h2>Advantages of Our Work for Peer Review</h2>
+<ul>
+<li>Supports editors by linking reviewer comments to paper evidence.</li>
+<li>Makes peer review decisions more transparent and explainable.</li>
+<li>Reduces manual effort in checking whether comments are supported.</li>
+<li>Combines RAG retrieval with model-based evidence evaluation.</li>
+<li>Provides confidence scores to help prioritize difficult cases.</li>
+<li>Keeps the human editor as the final decision-maker.</li>
+<li>Helps identify unsupported, partially supported, or unclear reviewer comments.</li>
+</ul>
+</section>
+<section id="importance-of-grid5000-in-our-work" class="slide level2">
+<h2>Importance of Grid5000 in Our Work</h2>
+<ul>
+<li>Provided a reliable research infrastructure for running our experiments.</li>
+<li>Offered a private computing environment for processing papers and reviews.</li>
+<li>Supported GPU-based execution of large language models.</li>
+<li>Enabled scalable experiments beyond local machine capacity.</li>
+<li>Available in Europe, including Western Europe, which supported our research context.</li>
+<li>Helped ensure more controlled and reproducible model testing.</li>
+<li>Served as the main infrastructure for our Evidence-RAG pipeline.</li>
+</ul>
+</section>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -255,9 +290,8 @@ Marion Salaün <a href="https://orcid.org/0009-0005-3624-823X" class="quarto-tit
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside>
-</section>
-
+      }</style></aside></section>
+<section>
 <section id="what-should-be-future-steps" class="title-slide slide level1 center">
 <h1>What should be future steps ?</h1>
 <p>……</p>
@@ -275,9 +309,17 @@ Marion Salaün <a href="https://orcid.org/0009-0005-3624-823X" class="quarto-tit
           display:block!important;
       }</style></aside>
 </section>
-
-<section id="proof-of-concept-poc" class="title-slide slide level1 center">
-<h1>Proof of Concept (POC)</h1>
+<section id="future-steps" class="slide level2">
+<h2>Future Steps</h2>
+<ul>
+<li>Test the system with more papers and reviewer comments.</li>
+<li>Compare results across different models and retrieval settings.</li>
+<li>Improve the confidence score with editor feedback.</li>
+<li>Add more human editors to evaluate fairness and consistency.</li>
+<li>Build a clearer dashboard for reviewing evidence and decisions.</li>
+<li>Study how Evidence-RAG can reduce workload in real editorial workflows.</li>
+<li>Extend the system to support more journals and disciplines. # Proof of Concept (POC)</li>
+</ul>
 <p>…..</p>
 <aside class="notes">
 
@@ -292,8 +334,7 @@ Marion Salaün <a href="https://orcid.org/0009-0005-3624-823X" class="quarto-tit
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-
+</section></section>
 <section id="bibliography" class="title-slide slide level1 center">
 <h1>Bibliography</h1>
 

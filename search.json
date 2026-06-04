@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html#advantages-of-our-work-for-peer-review",
+    "href": "index.html#advantages-of-our-work-for-peer-review",
+    "title": "Towards an Interactive ‘Evidence-RAG’ Peer-Review Workspace for the Journal of Digital History",
+    "section": "Advantages of Our Work for Peer Review",
+    "text": "Advantages of Our Work for Peer Review\n\nSupports editors by linking reviewer comments to paper evidence.\nMakes peer review decisions more transparent and explainable.\nReduces manual effort in checking whether comments are supported.\nCombines RAG retrieval with model-based evidence evaluation.\nProvides confidence scores to help prioritize difficult cases.\nKeeps the human editor as the final decision-maker.\nHelps identify unsupported, partially supported, or unclear reviewer comments."
+  },
+  {
+    "objectID": "index.html#importance-of-grid5000-in-our-work",
+    "href": "index.html#importance-of-grid5000-in-our-work",
+    "title": "Towards an Interactive ‘Evidence-RAG’ Peer-Review Workspace for the Journal of Digital History",
+    "section": "Importance of Grid5000 in Our Work",
+    "text": "Importance of Grid5000 in Our Work\n\nProvided a reliable research infrastructure for running our experiments.\nOffered a private computing environment for processing papers and reviews.\nSupported GPU-based execution of large language models.\nEnabled scalable experiments beyond local machine capacity.\nAvailable in Europe, including Western Europe, which supported our research context.\nHelped ensure more controlled and reproducible model testing.\nServed as the main infrastructure for our Evidence-RAG pipeline."
+  },
+  {
+    "objectID": "index.html#future-steps",
+    "href": "index.html#future-steps",
+    "title": "Towards an Interactive ‘Evidence-RAG’ Peer-Review Workspace for the Journal of Digital History",
+    "section": "Future Steps",
+    "text": "Future Steps\n\nTest the system with more papers and reviewer comments.\nCompare results across different models and retrieval settings.\nImprove the confidence score with editor feedback.\nAdd more human editors to evaluate fairness and consistency.\nBuild a clearer dashboard for reviewing evidence and decisions.\nStudy how Evidence-RAG can reduce workload in real editorial workflows.\nExtend the system to support more journals and disciplines. # Proof of Concept (POC)\n\n….."
+  }
+]
