@@ -86,15 +86,18 @@ Frédéric
 
 # Infrastructure
 
+:::: {.columns}
+::: {.column width="50%"}
 **Grid5000** is a large scale and flexible testbed for experiment-driven research in all areas of computer science.
-
+:::
+::: {.column width="50%"}
 ![](./img/16_06_26/grid5000.png)
+:::
+::::
 
-# Pipeline
+# 
 
-*image placeholder*
-
-![](./img/16_06_26/pipeline.png)
+![](./img/16_06_26/pipeline.png){fig-align="center"}
 
 # JDH evidence audit app
 
@@ -104,11 +107,33 @@ Frédéric
 
 ![](./img/16_06_26/JDH_evidence_audit_app_2.png)
 
+#
+
+![](./img/16_06_26/JDH_evidence_audit_app_3.png)
+
+#
+
+![](./img/16_06_26/JDH_evidence_audit_app_4.png)
+![](./img/16_06_26/JDH_evidence_audit_app_5.png)
+
+
 # Results
 
-*TODO: Mehrdad opinions' to be added*
+#
 
-![](./img/16_06_26/output.png)
+
+:::: {.columns}
+::: {.column width="50%"}
+![](./img/16_06_26/output.png){}
+:::
+::: {.column width="50%"}
+- text placeholder
+- text placeholder
+- text placeholder
+- text placeholder
+:::
+::::
+
 
 ::: notes 
 Mehrdad
@@ -116,15 +141,48 @@ Mehrdad
 
 # 
 
-![](./img/16_06_26/output1.png)
+
+:::: {.columns}
+::: {.column width="50%"}
+![](./img/16_06_26/output1.png){}
+:::
+::: {.column width="50%"}
+- text placeholder
+- text placeholder
+- text placeholder
+- text placeholder
+:::
+::::
 
 # 
 
-![](./img/16_06_26/output2.png)
+
+:::: {.columns}
+::: {.column width="50%"}
+![](./img/16_06_26/output2.png){}
+:::
+::: {.column width="50%"}
+- text placeholder
+- text placeholder
+- text placeholder
+- text placeholder
+:::
+::::
 
 # 
 
-![](./img/16_06_26/output3.png)
+
+:::: {.columns}
+::: {.column width="50%"}
+![](./img/16_06_26/output3.png){}
+:::
+::: {.column width="50%"}
+- text placeholder
+- text placeholder
+- text placeholder
+- text placeholder
+:::
+::::
 
 
 # What should be future steps ?
@@ -136,7 +194,9 @@ Mehrdad
 
 # Proof of Concept (POC)
 
-.....
+#
+
+![](./img/16_06_26/POC_review.png){fig-align="center"}
 
 :::notes
 :::
